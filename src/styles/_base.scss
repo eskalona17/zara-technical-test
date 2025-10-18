@@ -1,0 +1,79 @@
+/* base.css */
+
+@font-face {
+  font-family: 'ABeeZee';
+  src: url('../assets/fonts/ABeeZee-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables */
+:root {
+  -webkit-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
+
+  /* COLORS */
+  --color-bg: #FFFFFF;
+  --color-text: #000000;
+
+  /* SPACING / SIZE */
+  // --space-xxs: 4px;
+  // --space-xs: 8px;
+  // --space-sm: 12px;
+  // --space-md: 16px;
+  // --space-lg: 24px;
+  // --space-xl: 40px;
+
+  /* TYPOGRAPHY */
+  --font-family-sans: 'ABeeZee', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+
+  /* BREAKPOINTS (mobile-first) */
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Base styles */
+html {
+  font-size: 12px; /* ajusta si quieres */
+}
+body {
+  font-family: var(--font-family-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, a, img, small, strong,
+sub, sup, b, i, u, center, dl, dt, dd, ol, ul, li,
+form, fieldset, figure, legend, table, caption, tbody, tfoot, thead,
+tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: 12px; /* ajusta si quieres */
+
+}
+
+/* images responsive by default */
+img, picture, svg, video {
+  max-width: 100%;
+  display: block;
+}
+
+/* make buttons and inputs inherit font */
+button, input, textarea, select {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* basic accessibility */
+a { color: inherit; text-decoration: none; }
