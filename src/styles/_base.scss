@@ -59,7 +59,12 @@ tr, th, td {
   border: 0;
   vertical-align: baseline;
   font-size: 12px; /* ajusta si quieres */
+}
 
+main {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 2rem;
 }
 
 /* images responsive by default */
