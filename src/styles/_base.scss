@@ -1,5 +1,6 @@
-/* base.css */
+/* _base.scss */
 
+/* Fonts */
 @font-face {
   font-family: 'ABeeZee';
   src: url('../assets/fonts/ABeeZee-Regular.woff2') format('woff2');
@@ -9,8 +10,11 @@
 }
 
 /* Variables */
+$bp-md: 768px;
+$bp-lg: 1024px;
+
 :root {
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 
   /* COLORS */
@@ -18,29 +22,28 @@
   --color-text: #000000;
 
   /* SPACING / SIZE */
-  // --space-xxs: 4px;
-  // --space-xs: 8px;
-  // --space-sm: 12px;
-  // --space-md: 16px;
-  // --space-lg: 24px;
-  // --space-xl: 40px;
+  --full-screen: 1920px;
+  --font-size: 12px;
 
   /* TYPOGRAPHY */
   --font-family-sans: 'ABeeZee', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 
   /* BREAKPOINTS (mobile-first) */
-  --bp-md: 768px;
-  --bp-lg: 1024px;
+  --bp-md: #{$bp-md};
+  --bp-lg: #{$bp-lg};
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
 /* Base styles */
 html {
-  font-size: 12px; /* ajusta si quieres */
+  font-size: var(--font-size);
 }
+
 body {
   font-family: var(--font-family-sans);
   background: var(--color-bg);
@@ -49,36 +52,94 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, a, img, small, strong,
-sub, sup, b, i, u, center, dl, dt, dd, ol, ul, li,
-form, fieldset, figure, legend, table, caption, tbody, tfoot, thead,
-tr, th, td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+u,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+fieldset,
+figure,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
   margin: 0;
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  font-size: 12px; /* ajusta si quieres */
+  font-size: 12px;
+  /* ajusta si quieres */
 }
 
 main {
   margin: 0 auto;
-  max-width: 1920px;
-  padding: 2rem;
+  max-width: var(--full-screen);
+  padding-inline: clamp(1rem, 6vw, 0rem);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-inline: 0;
+  }
 }
 
 /* images responsive by default */
-img, picture, svg, video {
+img,
+picture,
+svg,
+video {
   max-width: 100%;
   display: block;
 }
 
+header, section {
+  position: relative;
+  margin: 1rem;
+}
+
 /* make buttons and inputs inherit font */
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   background: none;
   border: none;
   outline: none;
 }
 
 /* basic accessibility */
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}

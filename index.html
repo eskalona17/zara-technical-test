@@ -4,233 +4,231 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mi Proyecto</title>
+  <title>ZARA Technical test</title>
 </head>
 
 <body>
 
   <main>
-  <header class="site-header">
-    <div class="container-header">
-      <div class="site-title">
-        <h1>ZARA ORIGINS</h1>
-      </div>
-      <div class="container">
-        <p>Identity by MSM paris Photography by Jaime Hakesworth
-        </p>
-        <p> Short movie directed by BYNT
-          Script by David Scearce
-          Produced by Canada</p>
-      </div>
-      <div class="container">
-        <p>inspired by Vivaldi´s
-          four seansons</p>
-      </div>
-    </div>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__content">
+        <div class="header__title">
+          <h1>ZARA ORIGINS</h1>
+        </div>
 
-    <div class="container-img">
-      <img src="./src/public/img01-borrar.png" alt="" srcset="">
-      <p>
-        Picture by Jamie Hakesworth ZARA ORIGINS collection
-        Tappei
-      </p>
+        <div class="header__credits">
+          <p>Identity by MSM Paris — Photography by Jamie Hawkesworth</p>
+          <p>Short movie directed by BYNT — Script by David Scearce — Produced by Canada</p>
+        </div>
+        <div class="header__credis">
+          <p>Inspired by Vivaldi’s Four Seasons</p>
+        </div>
+      </div>
 
-    </div>
-
-  </header>
-
-  <section class="first-section">
-    <div class="full-screen-section">
-      <img src="./src/public/img02.png" alt="" srcset="">
-    </div>
-  </section>
-
-  <section class="second-section">
-    <div class="container-image">
-      <img src="./src/public/img03.png" alt="" srcset="">
-    </div>
-    <div class="container">
-      <p>ZARA ORIGINS</p>
-      <p>#Permanent Collection </p>
-      <p>Zara Origins is a project focused upon building a contemporary wardrobe. </p>
-      <p>The aim is to conceive, create and offer garments which are newly-refined </p>
-      archetypes of their kind, fabricated in the finest materials, and
-      manufactured with high standards of expertise
-      and craft. It harnesses
-      progressive desing to combine modern concepts with outstanding valve.</p>
-
-    </div>
-  </section>
-
-  <section class="carousel-section">
-    <div class="carousel-track">
-      <div class="carousel-img">
-        <img src="./src/public/img04.png" alt="">
-        <caption>01/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img05.png" alt="">
-        <caption>02/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img06.png" alt="">
-        <caption>03/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img07.png" alt="">
-        <caption>04/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img08.png" alt="">
-        <caption>05/05</caption>
-      </div>
-      <!-- duplicamos para animación infinita -->
-      <div class="carousel-img">
-        <img src="./src/public/img04.png" alt="">
-        <caption>01/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img05.png" alt="">
-        <caption>02/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img06.png" alt="">
-        <caption>03/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img07.png" alt="">
-        <caption>04/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img08.png" alt="">
-        <caption>05/05</caption>
-      </div>
-    </div>
-  </section>
-
-  <section class="third-section">
-    <div class="container-image">
-      <figure>
-        <img src="./src/public/img09.png" alt="" srcset="">
+      <figure class="header__image">
+        <img src="./src/public/img01-borrar.png"
+          alt="Model portrait from Zara Origins collection, photographed by Jamie Hawkesworth">
+        <figcaption>Picture by Jamie Hawkesworth — Zara Origins collection, Tappei</figcaption>
       </figure>
-      <div class="container-image-text">
+    </header>
+
+    <!-- HERO / FULLSCREEN IMAGE -->
+    <section class="section section--hero" data-anim>
+      <figure class="media media--fullscreen">
+        <img src="./src/public/img02.png" alt="Editorial full-screen photo from Zara Origins campaign">
+      </figure>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="section section--intro" data-anim>
+      <figure class="media">
+        <img src="./src/public/img03.png" alt="Model wearing minimalist Zara Origins outfit">
+      </figure>
+
+      <div class="content">
+        <p class="brand">ZARA ORIGINS</p>
+        <p class="hashtag">#PermanentCollection</p>
+        <p>Zara Origins is a project focused on building a contemporary wardrobe.</p>
+        <p>The aim is to conceive, create, and offer garments that are newly refined archetypes of their kind,
+          fabricated in the finest materials and crafted with high standards of expertise.</p>
+        <p>It harnesses progressive design to combine modern concepts with outstanding value.</p>
+      </div>
+    </section>
+
+    <!-- FIRST CAROUSEL -->
+    <section class="section carousel carousel--primary" data-anim>
+      <div class="carousel__track">
+        <figure class="carousel__item">
+          <img src="./src/public/img04.png" alt="Editorial photo look 1">
+          <figcaption>01/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img05.png" alt="Editorial photo look 2">
+          <figcaption>02/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img06.png" alt="Editorial photo look 3">
+          <figcaption>03/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img07.png" alt="Editorial photo look 4">
+          <figcaption>04/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img08.png" alt="Editorial photo look 5">
+          <figcaption>05/05</figcaption>
+        </figure>
+        <!-- Duplicate for infinite scroll -->
+        <figure class="carousel__item">
+          <img src="./src/public/img04.png" alt="Editorial photo look 1 duplicate">
+          <figcaption>01/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img05.png" alt="Editorial photo look 2 duplicate">
+          <figcaption>02/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img06.png" alt="Editorial photo look 3 duplicate">
+          <figcaption>03/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img07.png" alt="Editorial photo look 4 duplicate">
+          <figcaption>04/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img08.png" alt="Editorial photo look 5 duplicate">
+          <figcaption>05/05</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION STORY -->
+    <section class="section section--story" data-anim>
+      <div class="media-text">
+        <figure class="media">
+          <img src="./src/public/img09.png" alt="Studio portrait from Zara Origins collection">
+        </figure>
+        <div class="text">
+          <p>When Zara Origins launched its first two collections for the winter and summer seasons, the evolving
+            project was defined by this statement.</p>
+          <p>After two editions allowing for experimentation within the collection, the approach for the third edition
+            has evolved naturally, solidifying Zara Origins as a yearlong offering of wardrobe essentials supplemented
+            with limited-edition seasonal pieces.</p>
+        </div>
+      </div>
+
+      <figure class="media">
+        <img src="./src/public/img11.png" alt="Outdoor fashion shot from Zara Origins">
+      </figure>
+    </section>
+
+    <!-- SECOND CAROUSEL -->
+    <section class="section carousel carousel--secondary" data-anim>
+      <div class="carousel__track">
+        <figure class="carousel__item">
+          <img src="./src/public/img04.png" alt="Editorial photo look 1">
+          <figcaption>01/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img05.png" alt="Editorial photo look 2">
+          <figcaption>02/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img06.png" alt="Editorial photo look 3">
+          <figcaption>03/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img07.png" alt="Editorial photo look 4">
+          <figcaption>04/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img08.png" alt="Editorial photo look 5">
+          <figcaption>05/05</figcaption>
+        </figure>
+        <!-- Duplicate for loop -->
+        <figure class="carousel__item">
+          <img src="./src/public/img04.png" alt="Editorial photo look 1 duplicate">
+          <figcaption>01/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img05.png" alt="Editorial photo look 2 duplicate">
+          <figcaption>02/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img06.png" alt="Editorial photo look 3 duplicate">
+          <figcaption>03/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img07.png" alt="Editorial photo look 4 duplicate">
+          <figcaption>04/05</figcaption>
+        </figure>
+        <figure class="carousel__item">
+          <img src="./src/public/img08.png" alt="Editorial photo look 5 duplicate">
+          <figcaption>05/05</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION EDITORIAL -->
+    <section class="section section--editorial" data-anim>
+      <figure class="media">
+        <img src="./src/public/img19.png" alt="Studio composition of Zara Origins apparel">
+      </figure>
+      <div class="text">
+        <p>When Zara Origins launched its first two collections, the evolving project was defined by this statement.
+          After two editions allowing experimentation within the collection, the approach for the third edition has
+          evolved naturally, solidifying Zara Origins as a yearlong offering of wardrobe essentials.</p>
+        <p>The project now continues to merge function and form through limited seasonal pieces while preserving its
+          timeless foundation.</p>
+      </div>
+    </section>
+
+    <!-- SECTION CLOSING -->
+    <section class="section section--closing" data-anim>
+      <div class="text">
         <p>When Zara Origins launched its first two collection for the winter and summer seasons, the constantly
           evoluing project was defined by thes statement. After two editions allowing for experimentation within the
-          collection, the approach for the third editon has evolved naturally solidifying Zara Origins as a yearlong
-          offering of wardrobe essentials that will be supplemented with limited edition seasonal piece.</p>
+          collection, the approach for the third editon has evolved naturally solidifying Zara Origins as a.</p>
       </div>
-    </div>
-    <div class="container-image">
-      <img src="./src/public/img11.png" alt="" srcset="">
-    </div>
-  </section>
+      <figure class="media">
+        <img src="./src/public/img20.png" alt="Model wearing contemporary Zara Origins outfit">
+      </figure>
+    </section>
 
-  <section class="carousel-section">
-    <div class="carousel-track">
-      <div class="carousel-img">
-        <img src="./src/public/img04.png" alt="">
-        <caption>01/05</caption>
+    <!-- SHOP GRID -->
+    <section class="section section--shop" data-anim>
+      <h3>SHOP THE COLLECTION</h3>
+      <div class="shop-grid">
+        <img src="./src/public/grid01.png" alt="Zara Origins coat">
+        <img src="./src/public/grid02.png" alt="Zara Origins jacket">
+        <img src="./src/public/grid03.png" alt="Zara Origins shirt">
+        <img src="./src/public/grid04.png" alt="Zara Origins trousers">
+        <img src="./src/public/grid05.png" alt="Zara Origins bag">
+        <img src="./src/public/grid06.png" alt="Zara Origins shoes">
+        <img src="./src/public/grid07.png" alt="Zara Origins blazer">
+        <img src="./src/public/grid08.png" alt="Zara Origins sweater">
+        <img src="./src/public/grid09.png" alt="Zara Origins accessories">
+        <img src="./src/public/grid10.png" alt="Zara Origins knitwear">
+        <img src="./src/public/grid11.png" alt="Zara Origins polo">
+        <img src="./src/public/grid12.png" alt="Zara Origins trench coat">
+        <img src="./src/public/grid13.png" alt="Zara Origins denim jacket">
+        <img src="./src/public/grid14.png" alt="Zara Origins scarf">
+        <img src="./src/public/grid15.png" alt="Zara Origins backpack">
+        <img src="./src/public/grid16.png" alt="Zara Origins belt">
+        <img src="./src/public/grid17.png" alt="Zara Origins cardigan">
+        <img src="./src/public/grid18.png" alt="Zara Origins sneakers">
+        <img src="./src/public/grid19.png" alt="Zara Origins hat">
+        <img src="./src/public/grid20.png" alt="Zara Origins gloves">
+        <img src="./src/public/grid21.png" alt="Zara Origins vest">
+        <img src="./src/public/grid22.png" alt="Zara Origins parka">
+        <img src="./src/public/grid23.png" alt="Zara Origins shirt detail">
+        <img src="./src/public/grid24.png" alt="Zara Origins boots">
+        <img src="./src/public/grid25.png" alt="Zara Origins coat detail">
       </div>
-      <div class="carousel-img">
-        <img src="./src/public/img05.png" alt="">
-        <caption>02/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img06.png" alt="">
-        <caption>03/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img07.png" alt="">
-        <caption>04/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img08.png" alt="">
-        <caption>05/05</caption>
-      </div>
-      <!-- duplicamos para animación infinita -->
-      <div class="carousel-img">
-        <img src="./src/public/img04.png" alt="">
-        <caption>01/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img05.png" alt="">
-        <caption>02/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img06.png" alt="">
-        <caption>03/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img07.png" alt="">
-        <caption>04/05</caption>
-      </div>
-      <div class="carousel-img">
-        <img src="./src/public/img08.png" alt="">
-        <caption>05/05</caption>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="fourth-section">
-    <div>
-      <img src="./src/public/img19.png" alt="" srcset="">
-    </div>
-    <div class="container-image-text">
-      <p>When Zara Origins launched its first two collection for the winter and summer seasons, the constantly evoluing
-        project was defined by thes statement. After two editions allowing for experimentation within the collection,
-        the approach for the third editon has evolved naturally solidifying Zara Origins as a.
-      </p>
-      <p> When Zara Origins launched its first two collection for the winter and summer seasons, the constantly evoluing
-        project was defined by thes statement. After two editions allowing for experimentation within the collection,
-        the approach for the third editon has evolved naturally solidifying Zara Origins as a yearlong offering of
-        wardrobe essentials.When Zara Origins .</p>
-    </div>
-  </section>
-
-  <section class="fifth-section">
-
-    <div class="container-image-text">
-      <p>When Zara Origins launched its first two collection for the winter and summer seasons, the constantly evoluing
-        project was defined by thes statement. After two editions allowing for experimentation within the collection,
-        the approach for the third editon has evolved naturally solidifying Zara Origins as a.
-      </p>
-    </div>
-    <div>
-      <img src="./src/public/img20.png" alt="" srcset="">
-    </div>
-  </section>
-
-  <section class="grid-section">
-    <h3>SHOP THE COLLECTION</h3>
-    <div class="container-grid">
-      <img src="./src/public/grid01.png" alt="" srcset="">
-      <img src="./src/public/grid02.png" alt="" srcset="">
-      <img src="./src/public/grid03.png" alt="" srcset="">
-      <img src="./src/public/grid04.png" alt="" srcset="">
-      <img src="./src/public/grid05.png" alt="" srcset="">
-      <img src="./src/public/grid06.png" alt="" srcset="">
-      <img src="./src/public/grid07.png" alt="" srcset="">
-      <img src="./src/public/grid08.png" alt="" srcset="">
-      <img src="./src/public/grid09.png" alt="" srcset="">
-      <img src="./src/public/grid10.png" alt="" srcset="">
-      <img src="./src/public/grid11.png" alt="" srcset="">
-      <img src="./src/public/grid12.png" alt="" srcset="">
-      <img src="./src/public/grid13.png" alt="" srcset="">
-      <img src="./src/public/grid14.png" alt="" srcset="">
-      <img src="./src/public/grid15.png" alt="" srcset="">
-      <img src="./src/public/grid16.png" alt="" srcset="">
-      <img src="./src/public/grid17.png" alt="" srcset="">
-      <img src="./src/public/grid18.png" alt="" srcset="">
-      <img src="./src/public/grid19.png" alt="" srcset="">
-      <img src="./src/public/grid20.png" alt="" srcset="">
-      <img src="./src/public/grid21.png" alt="" srcset="">
-      <img src="./src/public/grid22.png" alt="" srcset="">
-      <img src="./src/public/grid23.png" alt="" srcset="">
-      <img src="./src/public/grid24.png" alt="" srcset="">
-      <img src="./src/public/grid25.png" alt="" srcset="">
-    </div>
-  </section>
-</main>
 
 
   <script type="module" src="/src/main.js"></script>

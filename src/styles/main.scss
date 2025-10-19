@@ -1,171 +1,332 @@
 @import '_base.scss';
 
-.site-header {
+/* =============== HEADER =============== */
+.header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 8rem;
-    gap: 7rem;
+    margin: clamp(2rem, 5vw + 1rem, 13rem);
+    gap: clamp(1rem, 2vw + 0.5rem, 7rem);
 
-    .container-header {
+    &__content {
         display: flex;
         text-align: right;
-        gap: 11rem;
+        gap: clamp(3rem, 2vw + 0.5rem, 11rem);
+        flex-direction: column;
 
-        .site-title {
-            text-wrap: nowrap;
+        &-title {
+            white-space: nowrap;
         }
 
-        .container p {
+        &-meta p {
             max-width: 15rem;
         }
-
     }
 
-    .container-img {
+    &__image {
         display: flex;
         flex-direction: column;
         gap: 1rem;
 
-        p {
+        figcaption {
             max-width: 10rem;
             align-self: end;
             text-align: right;
         }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.6s ease, filter 0.6s ease;
+
+            &:hover {
+                transform: scale(1.03);
+                filter: brightness(1.08);
+            }
+        }
     }
 }
 
-.second-section {
+@media (min-width: $bp-md) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+
+        &__content {
+            text-align: left;
+            gap: 5rem;
+            flex-direction: row;
+        }
+    }
+}
+
+/* =============== SECTION: FULLSCREEN =============== */
+.section--hero {
+    margin: clamp(2rem, 5vw + 1rem, 13rem) 0;
+}
+
+/* =============== SECTION: INTRO =============== */
+.section--intro {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: clamp(4rem, 8vw + 1rem, 20rem) 0 clamp(2rem, 4vw + 1rem, 10rem) clamp(0rem, 4vw + 0.5rem, 1rem);
+    gap: clamp(2rem, 4vw + 1rem, 10rem);
+
+    .content {
+        max-width: 33rem;
+        text-align: right;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 1s ease, filter 1s ease;
+        max-width: 72rem;
+    }
+
+    &.in-view img {
+        transform: scale(1.02);
+        filter: brightness(1.05);
+    }
+}
+
+@media (min-width: $bp-md) {
+    .section--intro {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+
+        .content {
+            text-align: left;
+            margin-bottom: -5rem;
+        }
+    }
+}
+
+// @media (min-width: $bp-lg) {
+//     .section--intro {
+//         flex-direction: row;
+//         align-items: flex-end;
+//         justify-content: flex-start;
+
+//         .content {
+//             text-align: left;
+//             position: absolute;
+//             right: 48rem;
+//         }
+//     }
+// }
+
+/* =============== SECTION: ABOUT =============== */
+.section--about {
+    display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
     margin: 7rem 5rem 7rem 1rem;
-    align-items: end;
+    align-items: flex-end;
 
-    .container {
-        max-width: 414.62px;
+    &__text {
+        max-width: 414px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.6s ease, filter 0.6s ease;
+
+        &:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
     }
 }
 
-.carousel-section {
-    overflow-x: hidden;
+/* =============== CAROUSEL =============== */
+.carousel {
+    overflow: hidden;
     padding: 15rem 1rem;
     display: flex;
     justify-content: center;
+    position: relative;
+    cursor: grab;
 
     &::-webkit-scrollbar {
         display: none;
     }
 
-    .carousel-track {
+    &__track {
         display: flex;
         gap: 1rem;
-        animation: spin 100s linear infinite;
+        animation: scroll-carousel 100s linear infinite;
     }
 
-    .carousel-img {
+    &__slide {
         flex: 0 0 calc((100% - 2rem) / 3);
-        /* 3 imágenes visibles, restando gap */
         position: relative;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* mantiene proporción y llena el contenedor */
             display: block;
-        }
-
-        caption {
-            position: absolute;
-            bottom: 0.5rem;
-            right: 0.5rem;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-    }
-}
-
-.third-section {
-    margin: 5rem;
-    display: flex;
-    gap: 5rem;
-
-    .container-image {
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-
-        .container-image-text p {
-            max-width: 33rem;
-        }
-    }
-}
-
-.fourth-section {
-    display: flex;
-    align-items: end;
-    gap: 4rem;
-    margin: 15rem 5rem 7rem 2rem;
-
-    .container-image-text {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        max-width: 33rem;
-    }
-}
-
-.fifth-section {
-    margin: 5rem;
-    display: flex;
-    gap: 4rem;
-    align-items: end;
-    margin: 20rem 5rem 7rem 35rem;
-
-
-    .container-image-text {
-        max-width: 33rem;
-        text-align: right;
-    }
-}
-
-
-
-.grid-section {
-    h3 {
-        text-align: center;
-
-    }
-
-    .container-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
-        gap: 1rem;
-        margin: 7rem 13rem;
-
-        img {
-            width: 100%;
-            transition: transform .45s, filter .45s;
+            transition: transform 0.6s ease, filter 0.6s ease;
 
             &:hover {
                 transform: scale(1.04);
-                filter: brightness(1.02)
+                filter: brightness(1.05);
+            }
+        }
+
+        figcaption {
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+/* =============== SECTION: STORY =============== */
+.section--story {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 3rem;
+
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 1s ease, filter 1s ease;
+        max-width: 95%;
+    }
+
+    .media-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .text {
+
+            max-width: 33rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+}
+
+@media (min-width: $bp-md) {
+    .section--story {
+        flex-direction: row;
+        margin: 20rem 7rem 20rem 5rem;
+    }
+
+
+}
+
+
+/* =============== SECTION: EDITORIAL =============== */
+.section--editorial {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 3rem;
+    margin: 15rem 0;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 33rem;
+    }
+}
+
+@media (min-width: $bp-md) {
+    .section--editorial {
+        flex-direction: row;
+        margin: 20rem 7rem 20rem 5rem;
+        gap: 5rem;
+        align-items: flex-end;
+    }
+}
+
+
+/* =============== SECTION: CLOSING =============== */
+.section--closing {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 1rem;
+    gap: 3rem;
+    margin: 15rem 0;
+
+    .text {
+        max-width: 33rem;
+    }
+}
+
+@media (min-width: $bp-md) {
+
+    .section--closing {
+        flex-direction: row;
+        margin: 20rem 10rem 20rem 5rem;
+        gap: 5rem;
+        align-items: flex-end;
+    }
+}
+
+
+
+/* =============== GRID SHOP =============== */
+.section--shop {
+    text-align: center;
+
+    h3 {
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+    }
+
+    .shop-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        gap: 1rem;
+        margin: clamp(2rem, 3vw + 1rem, 7rem) clamp(3rem, 6vw + 2rem, 13rem);
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.45s ease, filter 0.45s ease;
+
+            &:hover {
+                transform: scale(1.04);
+                filter: brightness(1.02);
             }
         }
     }
 }
 
-
-
-@keyframes spin {
+/* =============== ANIMATIONS =============== */
+@keyframes scroll-carousel {
     from {
-        translate: 0;
+        transform: translateX(0);
     }
 
     to {
-        translate: -50%;
+        transform: translateX(-50%);
     }
 }
