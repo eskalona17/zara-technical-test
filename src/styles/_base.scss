@@ -105,12 +105,13 @@ td {
 main {
   margin: 0 auto;
   max-width: var(--full-screen);
-  padding-inline: clamp(1rem, 6vw, 0rem);
+  margin: clamp(1rem, 6vw, 0rem);
 }
 
 @media (min-width: 768px) {
   main {
-    padding-inline: 0;
+    margin: 0;
+    padding-bottom: 5rem;
   }
 }
 
@@ -121,11 +122,6 @@ svg,
 video {
   max-width: 100%;
   display: block;
-}
-
-header, section {
-  position: relative;
-  margin: 1rem;
 }
 
 /* make buttons and inputs inherit font */

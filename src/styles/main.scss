@@ -4,27 +4,23 @@
 .header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: clamp(2rem, 5vw + 1rem, 13rem);
-    gap: clamp(1rem, 2vw + 0.5rem, 7rem);
+    gap: clamp(2rem, 5vw, 9rem);
 
-    &__content {
+    &--content {
         display: flex;
-        text-align: right;
-        gap: clamp(3rem, 2vw + 0.5rem, 11rem);
+        gap: clamp(2rem, 8vw, 13rem);
         flex-direction: column;
 
-        &-title {
-            white-space: nowrap;
+        .header--credits {
+            max-width: 21rem;
         }
 
-        &-meta p {
-            max-width: 15rem;
+        .header--subcredits {
+            max-width: 11rem;
         }
     }
 
-    &__image {
+    &--image {
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -39,12 +35,6 @@
             width: 100%;
             height: auto;
             object-fit: cover;
-            transition: transform 0.6s ease, filter 0.6s ease;
-
-            &:hover {
-                transform: scale(1.03);
-                filter: brightness(1.08);
-            }
         }
     }
 }
@@ -52,12 +42,13 @@
 @media (min-width: $bp-md) {
     .header {
         flex-direction: row;
-        justify-content: space-between;
-        gap: 0;
+        margin: 5rem 10rem;
+        align-items: center;
+        // gap: 9rem;
 
-        &__content {
-            text-align: left;
-            gap: 5rem;
+        &--content {
+            text-align: right;
+            // gap: 13rem;
             flex-direction: row;
         }
     }
@@ -65,7 +56,7 @@
 
 /* =============== SECTION: FULLSCREEN =============== */
 .section--hero {
-    margin: clamp(2rem, 5vw + 1rem, 13rem) 0;
+    margin: clamp(2rem, 5vw + 7rem, 13rem) 0;
 }
 
 /* =============== SECTION: INTRO =============== */
@@ -75,7 +66,6 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    margin: clamp(4rem, 8vw + 1rem, 20rem) 0 clamp(2rem, 4vw + 1rem, 10rem) clamp(0rem, 4vw + 0.5rem, 1rem);
     gap: clamp(2rem, 4vw + 1rem, 10rem);
 
     .content {
@@ -111,49 +101,10 @@
     }
 }
 
-// @media (min-width: $bp-lg) {
-//     .section--intro {
-//         flex-direction: row;
-//         align-items: flex-end;
-//         justify-content: flex-start;
-
-//         .content {
-//             text-align: left;
-//             position: absolute;
-//             right: 48rem;
-//         }
-//     }
-// }
-
-/* =============== SECTION: ABOUT =============== */
-.section--about {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    margin: 7rem 5rem 7rem 1rem;
-    align-items: flex-end;
-
-    &__text {
-        max-width: 414px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.6s ease, filter 0.6s ease;
-
-        &:hover {
-            transform: scale(1.02);
-            filter: brightness(1.1);
-        }
-    }
-}
-
 /* =============== CAROUSEL =============== */
 .carousel {
     overflow: hidden;
-    padding: 15rem 1rem;
+    margin: 15rem 1rem 10rem 1rem;
     display: flex;
     justify-content: center;
     position: relative;
@@ -169,34 +120,52 @@
         animation: scroll-carousel 100s linear infinite;
     }
 
-    &__slide {
-        flex: 0 0 calc((100% - 2rem) / 3);
-        position: relative;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+            flex: 0 0 calc((100% - 2rem));
+
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: transform 0.6s ease, filter 0.6s ease;
-
-            &:hover {
-                transform: scale(1.04);
-                filter: brightness(1.05);
-            }
         }
 
         figcaption {
-            position: absolute;
-            bottom: 0.5rem;
-            right: 0.5rem;
-            background: rgba(0, 0, 0, 0.4);
-            color: #fff;
+            text-align: right;
             padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
         }
     }
+
+    &.carousel--secondary {
+        display: flex;
+        flex-direction: column;
+        margin: 7rem 0 10rem 0;
+        gap: 2rem;
+
+        .carousel-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 59rem;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+@media (min-width: $bp-md) {
+
+    .carousel {
+        &__item {
+            flex: 0 0 calc((100% - 2rem) / 3);
+        }
+    }
+
 }
 
 /* =============== SECTION: STORY =============== */
@@ -221,7 +190,6 @@
         gap: 2rem;
 
         .text {
-
             max-width: 33rem;
             margin-bottom: 2rem;
         }
@@ -232,7 +200,7 @@
 @media (min-width: $bp-md) {
     .section--story {
         flex-direction: row;
-        margin: 20rem 7rem 20rem 5rem;
+        margin: 10rem 7rem 10rem 5rem;
     }
 
 
@@ -258,8 +226,8 @@
 @media (min-width: $bp-md) {
     .section--editorial {
         flex-direction: row;
-        margin: 20rem 7rem 20rem 5rem;
-        gap: 5rem;
+        margin: 10rem 7rem 10rem 5rem;
+        gap: 4rem;
         align-items: flex-end;
     }
 }
@@ -283,7 +251,7 @@
 
     .section--closing {
         flex-direction: row;
-        margin: 20rem 10rem 20rem 5rem;
+        margin: 0rem 10rem 10rem 5rem;
         gap: 5rem;
         align-items: flex-end;
     }
@@ -301,21 +269,34 @@
         font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
     }
 
-    .shop-grid{
+    .shop-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 1rem;
-        margin: clamp(2rem, 3vw + 1rem, 7rem) clamp(3rem, 6vw + 2rem, 13rem);
+        margin: 3rem 0;
+
 
         img {
             width: 100%;
             object-fit: cover;
             transition: transform 0.45s ease, filter 0.45s ease;
+            cursor: pointer;
 
             &:hover {
                 transform: scale(1.04);
                 filter: brightness(1.02);
             }
+        }
+    }
+}
+
+@media (min-width: $bp-md) {
+    .section--shop {
+
+        .shop-grid {
+            grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+
+            margin-inline: 10rem;
         }
     }
 }
