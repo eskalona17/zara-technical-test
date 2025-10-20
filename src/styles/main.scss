@@ -44,11 +44,9 @@
         flex-direction: row;
         margin: 5rem 10rem;
         align-items: center;
-        // gap: 9rem;
 
         &--content {
             text-align: right;
-            // gap: 13rem;
             flex-direction: row;
         }
     }
@@ -202,8 +200,6 @@
         flex-direction: row;
         margin: 10rem 7rem 10rem 5rem;
     }
-
-
 }
 
 
@@ -292,7 +288,6 @@
 
 @media (min-width: $bp-md) {
     .section--shop {
-
         .shop-grid {
             grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
 
